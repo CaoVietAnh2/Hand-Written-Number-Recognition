@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+model_combined.pth
+output_digit/
+synthetic_operators/
+.ipynb_checkpoints/
+.vscode/
