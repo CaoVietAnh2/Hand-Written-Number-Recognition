@@ -75,7 +75,7 @@ def segment_image(image_path):
         cv2.THRESH_BINARY_INV, 11, 5
     )
     
-    # Các thao tác hình thái học: làm sạch nhiễu + chữa lành các vết nứt
+    # Các thao tác hình thái học: làm sạch nhiễu + ghép các vết nứt
     kernel_clean = np.ones((3, 3), np.uint8)
     thresh = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel_clean)
     
