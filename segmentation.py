@@ -54,6 +54,18 @@ def merge_broken_parts(rects):
 
 
 def segment_image(image_path):
+    """  
+    Trả về
+    -------
+    roi_images : list of np.ndarray (28×28 uint8)
+        Hình ảnh ký tự riêng lẻ, được sắp xếp từ trái sang phải
+    rects : list of (x, y, w, h)
+        Hộp giới hạn tương ứng với mỗi ROI
+    thresh : np.ndarray
+        Hình ảnh nhị phân đã ngưỡng hóa 
+    img_display : np.ndarray
+        Hình ảnh màu gốc 
+    """
     img = read_image_safe(image_path)
     if img is None:
         raise FileNotFoundError(f"Không thể đọc hình ảnh: {image_path}")
